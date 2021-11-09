@@ -21,7 +21,7 @@ public class Bright extends JPanel {
             g2d.drawImage(dest,0,0,this);
 
             // Writing New Image to a file in jpeg format
-            ImageIO.write(dest,"jpeg",new File("simple-image-processing/src/Image/Result/result.jpg"));
+            ImageIO.write(dest,"jpeg",new File("result.jpg"));
         } catch(Exception e) {
             e.printStackTrace();
         }
