@@ -22,6 +22,7 @@ public class Grayscale{
 
     //Membaca gambar
     try {
+      // Pastikan direktori gambar benar
       f = new File("241004.jpg");
       img = ImageIO.read(f);
     } catch(IOException e){
