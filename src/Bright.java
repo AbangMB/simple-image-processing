@@ -24,17 +24,17 @@ public class Bright extends JPanel {
         Graphics2D g2d = (Graphics2D)g;
 
         try {
-            // Reading Image From File
+            // Input Gambar
             BufferedImage src = ImageIO.read(getClass().getResource("Image/Color/14037.jpg"));
 
-            // Passing Source Image and brightening it by 50%-value of 1.0f means original image brightness
-            BufferedImage dest = changeBrightness(src,1.5f); // To change Brightness function
+            // Mencerahkan gambar sebanyak 50% dari yang awalnya 1.0f menjadi 1.5f
+            BufferedImage img = changeBrightness(src,1.5f); // To change Brightness function
 
-            // Drawing New Image On Panel
-            g2d.drawImage(dest,0,0,this);
+            // Tampilkan gambar tersebut pada panel
+            g2d.drawImage(img,0,0,this);
 
-            // Writing New Image to a file in jpeg format
-            ImageIO.write(dest,"jpeg",new File("result.jpg"));
+            // Output gambar tersebut menjadi sebuah file gambar baru dengan format .jpeg
+            ImageIO.write(img,"jpeg",new File("result.jpg"));
         } catch(Exception e) {
             e.printStackTrace();
         }
